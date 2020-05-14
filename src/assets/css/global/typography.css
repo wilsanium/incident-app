@@ -1,0 +1,26 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: var(--text-base-size);
+    line-height: var(--default-line-height);
+    color: var(--default-text-color);
+
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1, 'dlig' 1, 'ss01' 1;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+    color: var(--default-link-color);
+    transition: all var(--default-transition-speed) ease-in-out;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: var(--default-link-hover-color);
+    }
+}

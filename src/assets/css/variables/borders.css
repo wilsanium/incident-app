@@ -1,0 +1,16 @@
+:root {
+    --default-border-width: 1px;
+    --heavy-border-width: 2px;
+
+    --light-border-color: #f3f3f3;
+    --default-border-color: var(--light-grey);
+    --brand-border-color: var(--brand-primary);
+
+    --light-border: var(--default-border-width) solid var(--light-border-color);
+    --default-border: var(--default-border-width) solid var(--default-border-color);
+
+    --error-border: 1px solid var(--error);
+    --success-border: 1px solid var(--success);
+    --warning-border: 1px solid var(--warning);
+    --info-border: 1px solid var(--info);
+}

@@ -1,0 +1,187 @@
+@import "../../../../assets/css/variables/index.css";
+
+:host ::ng-deep {
+  .text-input {
+    --input-border: var(--default-border-width) solid
+      var(--default-border-color);
+  }
+
+  .form-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: var(--heavy-border-width) solid white;
+    padding: var(--padding-lg) 0 var(--padding-sm);
+    margin-bottom: var(--margin-md);
+
+    .header-action-icon {
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .title {
+    font-size: var(--heading-sm);
+    margin: 0;
+  }
+
+  .reactive-form {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--text-sm);
+  }
+
+  .form-control,
+  .form-group {
+    margin-bottom: var(--margin-md);
+  }
+
+  .form-control {
+    position: relative;
+    flex: 1 1 100%;
+    transition: border-color var(--default-transition-speed) ease-in-out;
+  }
+
+  .form-group {
+    border: none;
+    padding: 0;
+  }
+
+  legend {
+    margin-bottom: var(--margin-sm);
+  }
+
+  .form-control-label {
+    margin-bottom: var(--label-margin);
+    display: flex;
+    align-items: center;
+  }
+
+  .text-input,
+  .textarea-input {
+    display: flex;
+    width: 100%;
+    padding: var(--input-padding);
+    border: var(--input-border);
+
+    &[type="password"] {
+      padding-right: 2.5rem;
+    }
+
+    &:disabled {
+      background: rgba(255, 255, 255, 0.3);
+      color: rgba(255, 255, 255, 0.8);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .form-control--error .text-input {
+    background: var(--error-bg);
+
+    &[type="password"] {
+      background: white;
+    }
+  }
+
+  .toggle-password {
+    position: absolute;
+    cursor: pointer;
+    right: 0.8rem;
+    transform: translateY(-26px);
+    font-size: var(--text-md);
+    color: #777;
+
+    .show-icon {
+      display: none;
+    }
+
+    .hide-icon {
+      display: block;
+    }
+
+    &.show {
+      .show-icon {
+        display: block;
+      }
+      .hide-icon {
+        display: none;
+      }
+    }
+  }
+
+  .control-guidance {
+    font-size: var(--text-xs);
+    font-weight: var(--light-font-weight);
+    margin: 0 0 var(--margin-sm);
+
+    span {
+      font-weight: var(--xheavy-font-weight);
+    }
+
+    .error {
+      color: var(--error);
+    }
+
+    .success {
+      color: var(--success);
+    }
+  }
+
+  .error-message {
+    font-size: var(--text-xs);
+    font-weight: var(--heavy-font-weight);
+    color: var(--error);
+
+    p {
+      margin: var(--label-margin) 0 0;
+    }
+  }
+
+  .radio-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  .radio-list-item {
+    margin-right: var(--margin-md);
+  }
+
+  .form-control-radio {
+    opacity: 0;
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+  }
+
+  .form-control-radio--label {
+    position: relative;
+    font-size: var(--text-sm);
+  }
+
+  .form-control-radio--label:before {
+    border-radius: 50%;
+    border: 2px solid white;
+    content: "";
+    width: 16px;
+    height: 16px;
+    left: 10px;
+    top: 10px;
+    transition: all var(--default-transition-speed) ease-in-out;
+    margin-right: var(--input-padding);
+  }
+
+  .form-control-radio:focus + .form-control-radio--label:before,
+  .form-control-radio:hover + .form-control-radio--label:before {
+    border-width: 4px;
+  }
+
+  .form-control-radio:checked + .form-control-radio--label:before {
+    border-width: 8px;
+  }
+
+  .button-group {
+    margin-top: var(--margin-md);
+  }
+}

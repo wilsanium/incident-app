@@ -1,0 +1,10 @@
+:root {
+  --error-bg: color-mod(var(--error) blend(white 80%));
+  --success-bg: color-mod(var(--success) blend(white 90%));
+  --warning-bg: color-mod(var(--warning) blend(white 90%));
+  --info-bg: color-mod(var(--info) blend(white 90%));
+
+  --transparent-white-bg: rgba(255, 255, 255, 0.9);
+
+  --dark-bg: var(--dark-grey);
+}
