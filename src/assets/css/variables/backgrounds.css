@@ -6,5 +6,6 @@
 
   --transparent-white-bg: rgba(255, 255, 255, 0.9);
 
-  --dark-bg: var(--dark-grey);
+  --primary-bg: var(--dark-grey);
+  --secondary-bg: color-mod(var(--dark-grey) blend(white 10%));
 }

@@ -1,0 +1,23 @@
+<ng-container *ngIf="searchEnabledFlag">
+    <form app-form class="search-container" novalidate autocomplete="off">
+        <label class="form-control-label" for="pac-input">Location</label>
+        <input
+            class="text-input"
+            id="pac-input"
+            class="controls map-search"
+            type="text"
+            #searchInput
+        />
+    </form>
+</ng-container>
+
+<google-map width="100%" height="300px" [zoom]="zoom" [center]="center" #map>
+    <map-marker
+        *ngFor="let marker of markers"
+        [position]="marker.position"
+        [label]="marker.label"
+        [title]="marker.title"
+        [options]="marker.options"
+    >
+    </map-marker>
+</google-map>

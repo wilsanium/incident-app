@@ -1,0 +1,30 @@
+<div
+    class="control"
+    [ngClass]="{
+        'control--error': !!control.errors && (control.dirty || control.touched)
+    }"
+>
+    <label class="form-control-label" [for]="id"
+        >{{ label }}
+        <span class="optional" *ngIf="isOptional">(optional)</span></label
+    >
+    <p class="control-guidance" *ngIf="guidance">{{ guidance }}</p>
+    <textarea
+        class="text-input"
+        [ngClass]="{ 'auto-width': autoWidth }"
+        [id]="id"
+        [name]="id"
+        [formControl]="control"
+        [readonly]="readOnly"
+    ></textarea>
+
+    <div
+        *ngIf="!!control.errors && (control.dirty || control.touched)"
+        class="error-message"
+    >
+        <app-input-validation
+            [validationErrors]="control.errors"
+            [fieldName]="label"
+        ></app-input-validation>
+    </div>
+</div>

@@ -7,7 +7,9 @@
     --brand-border-color: var(--brand-primary);
 
     --light-border: var(--default-border-width) solid var(--light-border-color);
-    --default-border: var(--default-border-width) solid var(--default-border-color);
+    --default-border: var(--default-border-width) solid
+        var(--default-border-color);
+    --heavy-border: var(--heavy-border-width) solid var(--default-border-color);
 
     --error-border: 1px solid var(--error);
     --success-border: 1px solid var(--success);

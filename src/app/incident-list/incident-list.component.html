@@ -1,0 +1,35 @@
+<div class="section-header">
+    <h3 class="title">Active incidents</h3>
+    <ul class="action-list">
+        <li *ngFor="let action of actions">
+            <app-button
+                [btnIcon]="action.labelIcon"
+                (btnClickEvent)="action.command()"
+                >{{ action.label }}</app-button
+            >
+        </li>
+    </ul>
+</div>
+
+<ul class="incident-list">
+    <li class="incident-list-item" *ngFor="let incident of activeIncidents">
+        <app-incident-list-item [incident]="incident"></app-incident-list-item>
+    </li>
+</ul>
+
+<div class="view-on-map">
+    <app-button
+        btnType="secondary"
+        [btnIcon]="displayMap ? chevronUpIcon : chevronDownIcon"
+        btnIconPos="right"
+        (btnClickEvent)="toggleMap()"
+        >{{ displayMapText }} incidents on map</app-button
+    >
+</div>
+
+<ng-container *ngIf="displayMap">
+    <app-map
+        [center]="activeIncidents[0].location"
+        [searchEnabled]="false"
+    ></app-map>
+</ng-container>

@@ -1,0 +1,40 @@
+@import "../../assets/css/variables/index.css";
+
+.incident-list {
+    list-style: none;
+    margin: 0 0 var(--margin-lg);
+    padding: 0;
+}
+
+.incident-list-item {
+    border-bottom: var(--default-border);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--heavy-border);
+    padding-bottom: var(--padding-md);
+    margin-bottom: var(--margin-md);
+}
+
+.title {
+    margin: 0;
+}
+
+.action-list {
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+}
+
+.view-on-map {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    app-button {
+        width: auto;
+    }
+}

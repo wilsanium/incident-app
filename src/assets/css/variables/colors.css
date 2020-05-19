@@ -12,26 +12,13 @@
   --brand-primary: var(--turquoise);
   --brand-secondary: var(--grey);
 
-  --cta-primary: var(--turquoise);
+  --cta-primary: color-mod(var(--turquoise) blend(black 20%));
   --cta-secondary: var(--blue);
 
   --success: #00b709;
   --warning: #ffc000;
   --error: #de0606;
   --info: color-mod(var(--blue) blend(white 50%));
-
-  /* font */
-  --default-text-color: var(--grey);
-  --light-text-color: color-mod(var(--grey) blend(white 50%));
-  --default-link-color: var(--brand-primary);
-  --default-link-hover-color: color-mod(
-    var(--default-link-color) blend(black 25%)
-  );
-
-  --success-text: #00b709;
-  --warning-text: color-mod(#ffc000 blend(black 30%));
-  --error-text: #de0606;
-  --info-text: color-mod(var(--turquoise) blend(black 30%));
 
   /* background */
   --default-hover-bg-color: #fafafa;

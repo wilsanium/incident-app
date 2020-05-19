@@ -1,0 +1,61 @@
+<div class="date-time-container" [formGroup]="dateTimeFieldGroup">
+    <!-- not using fieldset as unable to apply flexbox in css due to bug -->
+    <div formGroupName="date" class="fieldset-group">
+        <h4 class="fieldset-title">Date</h4>
+
+        <div class="fieldset-col">
+            <app-text-input
+                class="form-control"
+                [control]="dateTimeFieldGroup.get('date.month')"
+                label="Month"
+                type="number"
+                min="1"
+                max="12"
+            ></app-text-input>
+        </div>
+
+        <div class="fieldset-col">
+            <app-text-input
+                class="form-control"
+                [control]="dateTimeFieldGroup.get('date.day')"
+                label="Day"
+                type="number"
+                min="1"
+                [max]="maxDaysInSelectedMonth"
+            ></app-text-input>
+        </div>
+
+        <div class="fieldset-col">
+            <app-text-input
+                class="form-control"
+                [control]="dateTimeFieldGroup.get('date.year')"
+                label="Year"
+                type="number"
+                [min]="previousYear"
+                [max]="currentYear"
+            ></app-text-input>
+        </div>
+    </div>
+
+    <div formGroupName="time" class="fieldset-group">
+        <h4 class="fieldset-title">Time</h4>
+
+        <div class="fieldset-col">
+            <app-text-input
+                class="form-control"
+                [control]="dateTimeFieldGroup.get('time.hour')"
+                label="Hour"
+                type="number"
+            ></app-text-input>
+        </div>
+
+        <div class="fieldset-col">
+            <app-text-input
+                class="form-control"
+                [control]="dateTimeFieldGroup.get('time.minute')"
+                label="Minute"
+                type="number"
+            ></app-text-input>
+        </div>
+    </div>
+</div>

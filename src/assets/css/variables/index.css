@@ -1,8 +1,11 @@
-@import './colors.css';
-@import './whitespace.css';
-@import './typography.css';
-@import './transitions.css';
+@import "./colors.css";
+@import "./whitespace.css";
+@import "./typography.css";
+@import "./transitions.css";
 
-@import './backgrounds.css';
-@import './borders.css';
-@import './forms.css';
+@import "./backgrounds.css";
+@import "./borders.css";
+@import "./forms.css";
+
+/* component level variables */
+@import "./avatar.css";

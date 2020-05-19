@@ -1,0 +1,193 @@
+@import "../../../../assets/css/variables/index.css";
+
+:host {
+    display: flex;
+}
+
+.g-button {
+    /* remove styling */
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    /* default styling */
+    display: flex;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: transparent;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: var(--heavy-font-weight);
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    padding: 0.4em 1.2em;
+
+    /* size */
+    &--lg {
+        /* padding: 0 2rem; */
+        font-size: var(--text-md);
+    }
+
+    &--md {
+        /* padding: 0 1.6rem; */
+        font-size: var(--text-sm);
+    }
+
+    &--sm {
+        /* padding: 0 0.8rem; */
+        font-size: var(--text-xs);
+    }
+
+    /* type */
+    &--primary {
+        color: white;
+        border-color: var(--cta-primary);
+        background: var(--cta-primary);
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: color-mod(var(--cta-primary) blend(black 20%));
+            border-color: color-mod(var(--cta-primary) blend(black 20%));
+        }
+    }
+
+    &--secondary {
+        color: white;
+        border-color: var(--cta-secondary);
+        background: var(--cta-secondary);
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: color-mod(var(--cta-secondary) blend(black 20%));
+            border-color: color-mod(var(--cta-secondary) blend(black 20%));
+        }
+    }
+
+    &--unstyled {
+        background: none;
+        color: var(--cta-secondary);
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+        border: none;
+        height: auto;
+        padding: 0;
+
+        &:hover,
+        &:active,
+        &:focus {
+            color: color-mod(var(--cta-secondary) blend(black 20%));
+        }
+    }
+
+    /* inverse */
+
+    &--primary {
+        &.g-button--inverse {
+            background: transparent;
+            color: var(--cta-primary);
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: color-mod(var(--cta-primary) blend(black 20%));
+            }
+            ,
+            &:disabled {
+                border-color: color-mod(var(--cta-primary) blend(white 80%));
+                color: color-mod(var(--cta-primary) blend(white 80%));
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    &--secondary {
+        &.g-button--inverse {
+            background: white;
+            color: var(--cta-secondary);
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: color-mod(var(--cta-secondary) blend(black 20%));
+            }
+        }
+    }
+
+    /* full width */
+    &--full-width-mobile {
+        width: 100%;
+
+        @media screen and (min-width: 768px) {
+            width: auto;
+        }
+    }
+
+    &--full-width {
+        width: 100%;
+    }
+
+    /* icons */
+    .icon-before {
+        margin-right: 8px;
+    }
+
+    .icon-after {
+        margin-left: 8px;
+    }
+
+    /* hide text on mobile */
+    .hide-on-mobile {
+        position: absolute;
+        left: -10000px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+
+        @media screen and (min-width: 460px) {
+            position: relative;
+            left: auto;
+            width: auto;
+            height: auto;
+        }
+    }
+}
+
+:host-context(.brand-theme) .g-button {
+    &--secondary {
+        color: color-mod(var(--cta-secondary) blend(black 20%));
+        background: rgba(255, 255, 255, 0.7);
+        border-color: rgba(255, 255, 255, 0.7);
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: white;
+            border-color: white;
+        }
+
+        &.g-button--inverse {
+            background: transparent;
+            border-color: white;
+            color: white;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background: rgba(255, 255, 255, 0.2);
+            }
+
+            &:disabled {
+                border-color: rgba(255, 255, 255, 0.5);
+                color: rgba(255, 255, 255, 0.5);
+                background: transparent;
+            }
+        }
+    }
+}

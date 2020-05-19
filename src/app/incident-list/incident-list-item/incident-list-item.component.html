@@ -1,0 +1,6 @@
+<a [routerLink]="['report-incident', incident.id]" class="incident-list-item">
+    <span class="priority" [ngClass]="incident.priority"></span>
+
+    {{ incident.summary }}
+    <span class="align-right">{{ incident.createDate | date: "short" }}</span>
+</a>

@@ -1,0 +1,45 @@
+<div class="section-header">
+    <h3 class="title">Report incident</h3>
+</div>
+
+<form
+    app-form
+    [formGroup]="incidentForm"
+    class="reactive-form"
+    novalidate
+    autocomplete="off"
+>
+    <div class="form-wrap">
+        <div class="alpha-col">
+            <app-text-input
+                class="form-control"
+                [control]="incidentForm.get('summary')"
+                label="Summary"
+                [autoFocus]="true"
+            ></app-text-input>
+
+            <app-textarea-input
+                class="form-control"
+                [control]="incidentForm.get('additionalDetail')"
+                label="Additional detail"
+            ></app-textarea-input>
+
+            <app-date-time
+                class="form-control"
+                [control]="incidentForm.get('dateTime')"
+                label="Date/time of incident"
+            ></app-date-time>
+        </div>
+
+        <div class="beta-col">
+            <app-map></app-map>
+        </div>
+    </div>
+
+    <div class="button-group">
+        <app-button (btnClickEvent)="submitIncident()">Submit</app-button>
+        <app-button [btnInverse]="true" (btnClickEvent)="cancelIncident()"
+            >Cancel</app-button
+        >
+    </div>
+</form>

@@ -1,36 +1,54 @@
 :root {
-    --text-base-size: 0.9em;
+  --text-base-size: 0.9em;
 
-    --heading-scale-ratio: 1.12;
-    --text-scale-ratio: 1.1;
+  --heading-scale-ratio: 1.12;
+  --text-scale-ratio: 1.1;
 
-    /* for use with heading typography - e.g. h1, h2 etc */
-    --heading-xs: calc((1.2em / var(--heading-scale-ratio)) / var(--heading-scale-ratio));
-    --heading-sm: calc(var(--heading-xs) * var(--heading-scale-ratio));
-    --heading-md: calc(var(--heading-sm) * var(--heading-scale-ratio) * var(--heading-scale-ratio));
-    --heading-lg: calc(var(--heading-md) * var(--heading-scale-ratio));
-    --heading-xl: calc(var(--heading-lg) * var(--heading-scale-ratio));
+  /* for use with heading typography - e.g. h1, h2 etc */
+  --heading-xs: calc(
+    (1.2em / var(--heading-scale-ratio)) / var(--heading-scale-ratio)
+  );
+  --heading-sm: calc(var(--heading-xs) * var(--heading-scale-ratio));
+  --heading-md: calc(
+    var(--heading-sm) * var(--heading-scale-ratio) * var(--heading-scale-ratio)
+  );
+  --heading-lg: calc(var(--heading-md) * var(--heading-scale-ratio));
+  --heading-xl: calc(var(--heading-lg) * var(--heading-scale-ratio));
 
-    /* for use with non heading typography - e.g. p, ul, table etc */
-    --text-xs: calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
-    --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
-    --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
-    --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
-    --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+  /* for use with non heading typography - e.g. p, ul, table etc */
+  --text-xs: calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+  --text-md: calc(
+    var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio)
+  );
+  --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
 
-    /* font-weights */
-    --light-font-weight: 100;
-    --normal-font-weight: 400;
-    --heavy-font-weight: 600;
-    --xheavy-font-weight: 700;
+  /* font-weights */
+  --light-font-weight: 100;
+  --normal-font-weight: 400;
+  --heavy-font-weight: 600;
+  --xheavy-font-weight: 700;
 
-    /* line-heights */
-    --default-line-height: 1.4;
+  /* line-heights */
+  --default-line-height: 1.4;
+
+  /* colors */
+  --default-text-color: white;
+  --default-link-color: var(--brand-primary);
+  --default-link-hover-color: color-mod(
+    var(--default-link-color) blend(white 25%)
+  );
+
+  --success-text: #00b709;
+  --warning-text: color-mod(#ffc000 blend(black 30%));
+  --error-text: #de0606;
+  --info-text: color-mod(var(--turquoise) blend(black 30%));
 }
 
 @media screen and (min-width: 500px) {
-    :root {
-        --text-base-size: 0.95em;
-        --text-scale-ratio: 1.1;
-    }
+  :root {
+    --text-base-size: 0.95em;
+    --text-scale-ratio: 1.1;
+  }
 }

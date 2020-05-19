@@ -1,0 +1,44 @@
+@import "../../assets/css/variables/index.css";
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--heavy-border);
+    padding-bottom: var(--padding-md);
+    margin-bottom: var(--margin-md);
+    margin-top: var(--layout-margin-md);
+}
+
+.title {
+    margin: 0;
+}
+/*
+.reactive-form {
+    max-width: 500px;
+} */
+
+.button-group {
+    margin-top: var(--margin-lg);
+}
+
+.form-wrap {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 700px) {
+        flex-direction: row;
+    }
+
+    .alpha-col {
+        flex: 1;
+
+        @media (min-width: 700px) {
+            margin-right: var(--gutter-md);
+        }
+    }
+
+    .beta-col {
+        flex: 1;
+    }
+}

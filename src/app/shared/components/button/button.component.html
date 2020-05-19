@@ -1,1 +1,33 @@
-<p>button works!</p>
+<button
+    class="g-button {{ btnTypeClass }} {{ btnSizeClass }} {{
+        btnFullWidthClass
+    }}"
+    [ngClass]="{ 'g-button--inverse': btnInverse }"
+    (click)="onClick()"
+    [disabled]="btnDisabled || btnLoading"
+>
+    <fa-icon
+        [icon]="btnIcon"
+        *ngIf="isIconBtn && iconPosition === 'left'"
+        class="icon-before"
+        [ngClass]="btnIconClass"
+    ></fa-icon>
+
+    <span [ngClass]="{ 'hide-on-mobile': btnHideTxtOnMobile }">
+        <ng-content></ng-content>
+    </span>
+
+    <fa-icon
+        [icon]="btnIcon"
+        *ngIf="isIconBtn && iconPosition === 'right'"
+        class="icon-after"
+        [ngClass]="btnIconClass"
+    ></fa-icon>
+
+    <fa-icon
+        *ngIf="btnLoading"
+        [icon]="spinnerIcon"
+        class="fa-spin icon-after"
+        [ngClass]="btnIconClass"
+    ></fa-icon>
+</button>

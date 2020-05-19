@@ -1,0 +1,9 @@
+:root {
+  --avatar-size: 30px;
+}
+
+@media screen and (min-width: 500px) {
+  :root {
+    --avatar-size: 40px;
+  }
+}

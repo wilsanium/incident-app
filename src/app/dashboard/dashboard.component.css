@@ -1,0 +1,5 @@
+@import '../../assets/css/variables/index.css';
+
+.dashboard {
+    margin-top: var(--layout-margin-md);
+}

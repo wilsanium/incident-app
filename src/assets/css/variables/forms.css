@@ -1,5 +1,6 @@
 :root {
-  --input-padding: 6px;
-  --input-border: 1px solid var(--default-border-color);
-  --input-bg: color-mod(var(--dark-grey) blend(white 10%));
+    --input-padding: 6px;
+    --input-border: 1px solid var(--default-border-color);
+    --input-text-color: white;
+    --input-bg: color-mod(var(--dark-grey) blend(white 10%));
 }

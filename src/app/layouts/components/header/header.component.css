@@ -1,0 +1,27 @@
+@import "../../../../assets/css/variables/index.css";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-bg);
+    padding: var(--padding-sm);
+}
+
+.active-profile {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    display: inline-flex;
+    height: var(--avatar-size);
+    width: var(--avatar-size);
+    margin-right: var(--margin-sm);
+    background-color: var(--brand-primary);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-weight: var(--heavy-font-weight);
+    border: var(--heavy-border-width) solid white;
+}

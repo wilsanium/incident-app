@@ -1,28 +1,29 @@
 :root {
-    --container-width: 1024px;
+  --container-width: 1024px;
 
-    --base-whitespace-unit: 0.8rem;
+  --base-whitespace-unit: 0.8rem;
 
-    --margin-sm: calc(var(--base-whitespace-unit) * 0.8);
-    --margin-md: calc(var(--base-whitespace-unit) * 1);
-    --margin-lg: calc(var(--base-whitespace-unit) * 1.8);
+  --margin-sm: calc(var(--base-whitespace-unit) * 0.8);
+  --margin-md: calc(var(--base-whitespace-unit) * 1);
+  --margin-lg: calc(var(--base-whitespace-unit) * 1.8);
 
-    --padding-sm: calc(var(--base-whitespace-unit) * 0.8);
-    --padding-md: calc(var(--base-whitespace-unit) * 1);
-    --padding-lg: calc(var(--base-whitespace-unit) * 1.8);
+  --padding-xs: calc(var(--base-whitespace-unit) * 0.4);
+  --padding-sm: calc(var(--base-whitespace-unit) * 0.8);
+  --padding-md: calc(var(--base-whitespace-unit) * 1);
+  --padding-lg: calc(var(--base-whitespace-unit) * 1.8);
 
-    --gutter-sm: calc(var(--base-whitespace-unit) * 0.8);
-    --gutter-md: calc(var(--base-whitespace-unit) * 1);
-    --gutter-lg: calc(var(--base-whitespace-unit) * 1.8);
+  --gutter-sm: calc(var(--base-whitespace-unit) * 0.8);
+  --gutter-md: calc(var(--base-whitespace-unit) * 1);
+  --gutter-lg: calc(var(--base-whitespace-unit) * 1.8);
 
-    --layout-margin-md: calc(var(--base-whitespace-unit) * 2);
+  --layout-margin-md: calc(var(--base-whitespace-unit) * 2);
 
-    --icon-gutter: 4px;
-    --label-margin: 4px;
+  --icon-gutter: 4px;
+  --label-margin: 4px;
 }
 
 @media screen and (min-width: 500px) {
-    :root {
-        --base-whitespace-unit: 1rem;
-    }
+  :root {
+    --base-whitespace-unit: 1rem;
+  }
 }
